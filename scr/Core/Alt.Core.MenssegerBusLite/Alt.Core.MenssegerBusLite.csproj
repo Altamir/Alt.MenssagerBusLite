@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Altamir Benkenstein</Authors>
+    <Company>Altamir</Company>
+    <Description>Implementação simples de Event Bus</Description>
+    <PackageReleaseNotes>Pacote com Interface implementação simples de um mensseger bus</PackageReleaseNotes>
+    <PackageIconUrl>http://i.imgur.com/1HBNmOF.png</PackageIconUrl>
+    <PackageTags>MenssegerBus;EventBus</PackageTags>
+    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>
+    <FileVersion>1.0.0.1</FileVersion>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+
+</Project>
