@@ -11,28 +11,28 @@ namespace Alt.Tests.MensegerBusLite
         private static void Main(string[] args)
         {
 
-            Console.WriteLine($"Inicio Registrar tipos ");
+            Console.WriteLine($"Inicio processo ");
 
             ReciverTest r1 = new ReciverTest("r-01");
 
-            Console.WriteLine($"Fim Registrar tipos \n");
 
             Console.WriteLine($"Programa chamou post  ");
-
-            MenssagerBus.Instance.Post(new ExampleEvent1() { Dado = "Programa call" });
+            MenssagerBus.Instance.Post(new ExampleEvent2() { Dado = "Programa call 1", Time = DateTimeOffset.Now });
 
             ReciverTest r2 = new ReciverTest("r-02");
+            MenssagerBus.Instance.Post(new ExampleEvent2() { Dado = "Programa call 2", Time = DateTimeOffset.Now });
 
-            Console.WriteLine($"vai remover Removeu r-1  ");
+            Console.WriteLine($"vai remover Removeu r-01  ");
             MenssagerBus.Instance.UnSubscriver(r1);
-            Console.WriteLine($"terminou de Removeu r-1  ");
+            Console.WriteLine($"terminou de Removeu r-01  ");
 
-            MenssagerBus.Instance.Post(new ExampleEvent2() { Dado = "Programa call" });
+            Console.WriteLine($"Programa chamou post  ");
+            MenssagerBus.Instance.Post(new ExampleEvent2() { Dado = "Programa call 3", Time = DateTimeOffset.Now });
 
             r1.DiaparaEvento1();
 
             List<ReciverTest> ricivers = new List<ReciverTest>();
-
+            Console.WriteLine($"Inicio post ");
             Task.Factory.StartNew(() =>
             {
                 for (int i = 1; i < 11; i++)
@@ -61,8 +61,9 @@ namespace Alt.Tests.MensegerBusLite
                     }
                 }
             });
-
             Console.WriteLine($"Fim post ");
+
+            Console.WriteLine($"Fim processo \n");
 
             Console.ReadKey();
         }
