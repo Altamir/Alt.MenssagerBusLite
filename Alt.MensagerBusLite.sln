@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alt.Tests.MensegerBusLite",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alt.Tests.MensagerBusLite45", "scr\Tests\Alt.Tests.MensagerBusLite45\Alt.Tests.MensagerBusLite45.csproj", "{FC8C9D8F-7CD3-436E-9A6E-D8D99E6F53A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alt.Tests.MenssagerBusLiteDroid", "scr\Tests\Alt.Tests.MenssagerBusLiteDroid\Alt.Tests.MenssagerBusLiteDroid.csproj", "{2F5B8F10-9B5E-4FE1-90D8-E3CFDDF070A6}"
+EndProject
 Global
 	GlobalSection(Performance) = preSolution
 		HasPerformanceSessions = true
@@ -34,6 +36,12 @@ Global
 		{FC8C9D8F-7CD3-436E-9A6E-D8D99E6F53A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC8C9D8F-7CD3-436E-9A6E-D8D99E6F53A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC8C9D8F-7CD3-436E-9A6E-D8D99E6F53A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F5B8F10-9B5E-4FE1-90D8-E3CFDDF070A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F5B8F10-9B5E-4FE1-90D8-E3CFDDF070A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F5B8F10-9B5E-4FE1-90D8-E3CFDDF070A6}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2F5B8F10-9B5E-4FE1-90D8-E3CFDDF070A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F5B8F10-9B5E-4FE1-90D8-E3CFDDF070A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F5B8F10-9B5E-4FE1-90D8-E3CFDDF070A6}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -42,6 +50,7 @@ Global
 		{D3EFB9C8-22A1-4DEA-B5E8-1FFCDBA257C0} = {99A56E1E-202C-4C65-AAE5-56B092FA3E7B}
 		{31FF2ACF-F425-47B7-8303-373FCFD95988} = {F832C710-80C8-4DEA-950E-9CE17CBF3C63}
 		{FC8C9D8F-7CD3-436E-9A6E-D8D99E6F53A6} = {F832C710-80C8-4DEA-950E-9CE17CBF3C63}
+		{2F5B8F10-9B5E-4FE1-90D8-E3CFDDF070A6} = {F832C710-80C8-4DEA-950E-9CE17CBF3C63}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F1303C99-CB55-42E5-9662-658A5C095FA8}
