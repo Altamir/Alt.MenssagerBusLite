@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Alt.Core.MenssegerBusLite
@@ -43,11 +44,25 @@ namespace Alt.Core.MenssegerBusLite
 
             if (result.Count > 0)
             {
-                Parallel.ForEach(result.ToList(), item =>
+#if NET45
+                new Thread(new ThreadStart(() =>
                 {
-                    item.Handler.HandleEvent(menssegerData);
-                });
 
+                    Parallel.ForEach(result.ToList(), item =>
+                    {
+                        item.Handler.HandleEvent(menssegerData);
+                    });
+
+                })).Start();
+#elif NETSTANDARD2_0
+                new Thread(new ParameterizedThreadStart(a =>
+                {
+                    Parallel.ForEach(result.ToList(), item =>
+                    {
+                        item.Handler.HandleEvent(menssegerData);
+                    });
+                })).Start();
+#endif
             }
         }
 
@@ -70,14 +85,15 @@ namespace Alt.Core.MenssegerBusLite
             IEnumerable<MethodInfo> metodos = GetMarkedMethods(reciver);
             Type type = reciver.GetType();
 
-
             if (this.subscrivers.ContainsKey(type))
             {
                 HashSet<MenssagerHandler> values = this.subscrivers[type];
-
-                foreach (MethodInfo item in metodos)
+                lock (this.trava)
                 {
-                    values.Add(new MenssagerHandler(reciver, item));
+                    foreach (MethodInfo item in metodos)
+                    {
+                        values.Add(new MenssagerHandler(reciver, item));
+                    }
                 }
             }
             else
@@ -87,14 +103,24 @@ namespace Alt.Core.MenssegerBusLite
                 {
                     values.Add(new MenssagerHandler(reciver, item));
                 }
-
-                this.subscrivers.Add(type, values);
+                lock (this.trava)
+                {
+                    this.subscrivers.Add(type, values);
+                }
             }
         }
 
         public void UnSubscriver(object reciver)
         {
-            throw new NotImplementedException();
+            Type type = reciver.GetType();
+            if (this.subscrivers.ContainsKey(type))
+            {
+                lock (this.trava)
+                {
+                    HashSet<MenssagerHandler> elements = this.subscrivers[type];
+                    int coaunrt = elements.RemoveWhere(x => x.Target == reciver);
+                }
+            }
         }
 
         private IEnumerable<MethodInfo> GetMarkedMethods(object @class)

@@ -2,15 +2,16 @@
 using Alt.Core.MenssegerBusLite.Utils;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
-namespace Alt.Tests.MensegerBusLite
+namespace Alt.Tests.MensagerBusLite45
 {
-    internal class Program
+    class Program
     {
-        private static void Main(string[] args)
+        static void Main(string[] args)
         {
-
             Console.WriteLine($"Inicio Registrar tipos ");
 
             ReciverTest r1 = new ReciverTest("r-01");

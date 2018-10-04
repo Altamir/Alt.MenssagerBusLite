@@ -28,9 +28,9 @@ namespace Alt.Core.MenssegerBusLite
 
         public override bool Equals(object obj)
         {
-            if (obj is EventHandler that)
+            if (obj is MenssagerHandler that)
             {
-                return Target == that.Target && MethodInfo.Equals(that.Method);
+                return Target == that.Target && MethodInfo.Equals(that.MethodInfo);
             }
             return false;
         }
