@@ -1,5 +1,6 @@
 ﻿using Alt.Core.MenssegerBusLite;
 using Alt.Core.MenssegerBusLite.Attributes;
+using Alt.Core.MenssegerBusLite.Utils;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -41,7 +42,7 @@ namespace Alt.Tests.MenssagerBusLiteDroid
 
             new Thread(new ThreadStart(() =>
             {
-                MenssagerBus.Instance.Post(new MenssagerLog($"iniciou inverter"));
+                MenssagerBus.Instance.Post(new MenssagerLogEvent("InverterService", $"iniciou inverter"));
 
                 Thread.Sleep(3000);               
                 string result = "";

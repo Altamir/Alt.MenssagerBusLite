@@ -34,8 +34,6 @@ namespace Alt.Core.MenssegerBusLite
             this.subscrivers = new Dictionary<Type, HashSet<MenssagerHandler>>();
         }
 
-
-
         public void Post(object menssegerData)
         {
             Type type = menssegerData.GetType();
@@ -64,21 +62,7 @@ namespace Alt.Core.MenssegerBusLite
                 })).Start();
 #endif
             }
-        }
-
-
-
-        public void RegisterEventType<T>()
-        {
-            Type type = typeof(T);
-            lock (this.trava)
-            {
-                if (!this.subscrivers.ContainsKey(type))
-                {
-                    this.subscrivers.Add(type, new HashSet<MenssagerHandler>());
-                }
-            }
-        }
+        }      
 
         public void Subscrive(object reciver)
         {

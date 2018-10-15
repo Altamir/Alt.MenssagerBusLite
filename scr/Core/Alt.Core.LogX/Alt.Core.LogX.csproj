@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>Logx is a library for writing application logs, it uses LiteDB to store its logs.</Description>
+    <Authors>altamir.benkenstein@gmail.com</Authors>
+    <PackageIconUrl>https://i.imgur.com/PeLpebH.jpg</PackageIconUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LiteDB" Version="4.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Alt.Core.MenssegerBusLite\Alt.Core.MenssegerBusLite.csproj" />
+  </ItemGroup>
+
+</Project>

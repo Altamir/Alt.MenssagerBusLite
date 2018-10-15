@@ -5,13 +5,15 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Altamir Benkenstein</Authors>
     <Company>Altamir</Company>
-    <Description>Implementação simples de Event Bus</Description>
-    <PackageReleaseNotes>Pacote com Interface implementação simples de um mensseger bus</PackageReleaseNotes>
+    <Description>MessagerBus, implementação de EventBus simples.</Description>
+    <PackageReleaseNotes>Implementação do messagerbus.
+Removido classes não utilizadas.
+Adicionado classe de messagerlog.</PackageReleaseNotes>
     <PackageIconUrl>http://i.imgur.com/1HBNmOF.png</PackageIconUrl>
     <PackageTags>MenssegerBus;EventBus</PackageTags>
-    <Version>1.0.1</Version>
-    <AssemblyVersion>1.0.0.1</AssemblyVersion>
-    <FileVersion>1.0.0.1</FileVersion>
+    <Version>1.0.3</Version>
+    <AssemblyVersion>1.0.0.3</AssemblyVersion>
+    <FileVersion>1.0.0.3</FileVersion>
     <LangVersion>7.1</LangVersion>
   </PropertyGroup>
 

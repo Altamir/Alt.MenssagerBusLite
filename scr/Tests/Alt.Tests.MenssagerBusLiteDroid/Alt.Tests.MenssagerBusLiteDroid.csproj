@@ -57,12 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="InverterService.cs" />
-    <Compile Include="MainActivity.cs" />
-    <Compile Include="MenssagerLog.cs" />
+    <Compile Include="Activitys\MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReverseRequiredMenssager.cs" />
     <Compile Include="ReverserResultMensseger.cs" />
+    <Compile Include="Activitys\SecondActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -99,6 +99,15 @@
     <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2.1" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\layout\Second.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Alt.Core.LogX\Alt.Core.LogX.csproj">
+      <Project>{369835cf-339a-4ab9-a54e-b18ddf4d4e0f}</Project>
+      <Name>Alt.Core.LogX</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Core\Alt.Core.MenssegerBusLite\Alt.Core.MenssegerBusLite.csproj">
       <Project>{d3efb9c8-22a1-4dea-b5e8-1ffcdba257c0}</Project>
       <Name>Alt.Core.MenssegerBusLite</Name>

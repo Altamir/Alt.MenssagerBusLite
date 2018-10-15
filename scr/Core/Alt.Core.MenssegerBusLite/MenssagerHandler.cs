@@ -22,7 +22,7 @@ namespace Alt.Core.MenssegerBusLite
             }
             catch (Exception e)
             {
-                throw;
+                throw e;
             }
         }
 
