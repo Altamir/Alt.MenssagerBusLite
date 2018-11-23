@@ -53,7 +53,7 @@ namespace Alt.Core.MenssegerBusLite
 
                 })).Start();
 #elif NETSTANDARD2_0
-                new Thread(new ParameterizedThreadStart(a =>
+                new Thread(new ThreadStart(() =>
                 {
                     Parallel.ForEach(result.ToList(), item =>
                     {
