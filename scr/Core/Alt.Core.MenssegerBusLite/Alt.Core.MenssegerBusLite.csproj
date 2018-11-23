@@ -11,10 +11,12 @@ Removido classes não utilizadas.
 Adicionado classe de messagerlog.</PackageReleaseNotes>
     <PackageIconUrl>http://i.imgur.com/1HBNmOF.png</PackageIconUrl>
     <PackageTags>MenssegerBus;EventBus</PackageTags>
-    <Version>1.0.3</Version>
-    <AssemblyVersion>1.0.0.3</AssemblyVersion>
-    <FileVersion>1.0.0.3</FileVersion>
+    <Version>1.1.0</Version>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <FileVersion>1.0.1.0</FileVersion>
     <LangVersion>7.1</LangVersion>
+    <PackageProjectUrl>https://github.com/Altamir/Alt.MenssagerBusLite</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Altamir/Alt.MenssagerBusLite</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
